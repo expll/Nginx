@@ -23,3 +23,6 @@ location / {
 }
 
 ```
+
+### 主机启动日志
+cat /var/log/messages
