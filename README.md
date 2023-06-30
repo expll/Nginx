@@ -26,3 +26,18 @@ location / {
 
 ### 主机启动日志
 cat /var/log/messages
+
+
+### nginx 支持PHP
+```
+yum install php php-fpm
+vim /etc/php-fpm.d/www.conf
+listen = 127.0.0.1:9000
+启动PHP-FPM服务：
+sudo systemctl start php-fpm
+还可以将其设置为开机启动：
+systemctl enable php-fpm
+
+检查mbstring扩展是否已安装：运行以下命令查看系统上是否安装了mbstring扩展：
+yum install php-mbstring
+```
