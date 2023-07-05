@@ -41,3 +41,10 @@ systemctl enable php-fpm
 检查mbstring扩展是否已安装：运行以下命令查看系统上是否安装了mbstring扩展：
 yum install php-mbstring
 ```
+
+### 开机自启动
+nginx-start.sh 已上传
+```
+chkconfig --add nginx-start.sh
+chkconfig nginx-start.sh on
+```
