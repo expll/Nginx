@@ -41,6 +41,15 @@ systemctl enable php-fpm
 检查mbstring扩展是否已安装：运行以下命令查看系统上是否安装了mbstring扩展：
 yum install php-mbstring
 ```
+```
+location ~ \.php$ {
+	    fastcgi_pass   127.0.0.1:9000;
+	    fastcgi_index  index.php;
+	    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+	    include        fastcgi_params;
+	}
+```
+
 
 ### 开机自启动
 nginx-start.sh 已上传
